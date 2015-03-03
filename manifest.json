@@ -1,0 +1,38 @@
+{
+  "manifest_version": 2,
+  "name": "Reddit_It",
+  "version" : "1",
+  "description": "What does Reddit say?",
+   "browser_action": {
+   	"default_icon": "images/reddit_happy_icon.jpg",
+   	"default_popup": "popup.html"
+   	}, 
+  "background": {
+  	"scripts": ["js/jquery_1.11.0.js","js/background.js"],
+	  "persistent" : true
+   },
+   "content_scripts": [
+    	{	
+        "matches": ["http://*/*", "https://*/*"],
+        "js": ["js/jquery_1.11.0.js","js/content.js"]
+    	}
+	],
+  "offline_enabled": false,
+	"options_page": "options.html",
+	"permissions" : ["activeTab",
+  "tabs",
+  "http://www.reddit.com/r/*",
+  "storage",
+  "contextMenus",
+  "cookies",
+  "background"],
+  "icons": {
+    "16": "images/reddit_happy_icon.jpg"
+  },
+  "web_accessible_resources":[
+    "images/*.png",
+    "images/*.jpg",
+    "images/*.gif",
+    "js/*.js",
+  ]
+}
