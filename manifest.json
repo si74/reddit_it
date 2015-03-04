@@ -33,6 +33,6 @@
     "images/*.png",
     "images/*.jpg",
     "images/*.gif",
-    "js/*.js",
+    "js/*.js"
   ]
 }

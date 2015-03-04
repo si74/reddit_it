@@ -7,7 +7,10 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse){
 		if (keywords){
 			
 		}else{
+		} 
 		
+		sendReponse({message:"OK"});
+
 	}
 
 });
